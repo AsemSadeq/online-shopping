@@ -1,0 +1,137 @@
+.product-card {
+    background-color: #fff;
+    padding: 0.1875rem;
+    text-align: center;
+    .card-img {
+        position: relative;
+        img {
+            width: 70%;
+        }
+        .sale-label {
+            background-color: #e40046;
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.125rem 0.58rem;
+            position: absolute;
+            text-transform: uppercase;
+            top: 0.625rem;
+            display: block;
+            left: 0;
+        }
+        .favorite-label {
+            cursor: pointer;
+            position: absolute;
+            top: 0.625rem;
+            right: 0;
+            color: #e5e5e5;
+            font-size: 1.25rem;
+            padding: 0.125rem 0.58rem;
+        }
+
+        .wished {
+            color: #e40046;
+        }
+
+        .discount-label {
+            position: absolute;
+            bottom: -0.625rem;
+            right: 0;
+            font-size: 0.75rem;
+            background-color: #feefde;
+            width: 2.5rem;
+            line-height: 2.5rem;
+            height: 2.5rem;
+            color: #f68b1e;
+            font-weight: 700;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+        }
+    }
+    .card-info {
+        text-align: left;
+        padding: 1rem 0.3125rem 0.3125rem;
+        .vendor {
+            color: #878787;
+            margin-bottom: 0.5rem;
+            font-size: 0.625rem;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+        .product-name {
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 14px;
+            font-weight: 400;
+            color: #212121;
+            text-transform: capitalize;
+            margin: 0.3125rem 0;
+        }
+        .product-btn {
+            color: #f17e0a;
+            display: block;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            background-color: #fff;
+            text-align: center;
+            border: 1px solid #f17e0a;
+            text-decoration: none;
+            transition: 0.5s all;
+            -webkit-transition: 0.5s all;
+            -moz-transition: 0.5s all;
+            -ms-transition: 0.5s all;
+            -o-transition: 0.5s all;
+            &:hover {
+                background-color: #f17e0a;
+                color: #fff;
+            }
+        }
+    }
+
+    .price-block {
+        margin-bottom: 0.5rem;
+    }
+    .price-label {
+        text-transform: capitalize;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #212121;
+    }
+    .discount-price {
+        color: #999;
+        font-size: 0.75rem;
+        text-transform: lowercase;
+        text-decoration: line-through;
+        padding-left: 0.5rem;
+    }
+}
+
+.vote-container {
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    .star {
+        color: #fbb023;
+        margin-right: 0.25rem;
+        vertical-align: middle;
+    }
+    .vote-number {
+        color: #999;
+        margin-left: 0.25rem;
+    }
+}
+
+.ship-block {
+    margin-bottom: 0.5rem;
+
+    .ship-type {
+        font-size: 1.125rem;
+        color: rgba(228, 0, 68, 0.74);
+        padding-right: 1.5625rem;
+    }
+}

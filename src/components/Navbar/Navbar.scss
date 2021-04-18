@@ -1,0 +1,95 @@
+nav {
+    background-color: #fff;
+    box-shadow: grey 0px 2px 2px -2px;
+    padding: 15px 0;
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        color: #e40046;
+        font-weight: bold;
+        font-size: 1.25rem;
+        text-decoration: none;
+    }
+    .toggle-bar {
+        display: none;
+    }
+    .nav {
+        display: grid;
+        grid-template-columns: repeat(7, auto);
+        gap: 1.25rem;
+        .nav-link {
+            a {
+                text-transform: capitalize;
+                color: #6e6e6e;
+                text-decoration: none;
+                &:hover {
+                    color: #e40046;
+                }
+            }
+            .active {
+                color: #e40046;
+            }
+            .cart-number {
+                background-color: #e40046;
+                color: #fff;
+                margin-left: 2px;
+                padding: 0.25em 0.4em;
+                font-weight: 700;
+                font-size: 70%;
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    nav {
+        .toggle-bar {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            gap: 0.25rem;
+            cursor: pointer;
+            div {
+                border: 1px solid gray;
+                width: 1.25rem;
+            }
+        }
+        .nav {
+            grid-template-columns: 1fr;
+        }
+        .nav-side {
+            position: fixed;
+            background-color: #fff;
+            z-index: 100;
+            min-height: 100vh;
+            width: 200px;
+            top: 0;
+            align-content: start;
+            padding: 1rem 0;
+            box-shadow: 2px 2px 2px -2px grey;
+            transition: 0.3s all;
+            -webkit-transition: 0.3s all;
+            -moz-transition: 0.3s all;
+            -ms-transition: 0.3s all;
+            -o-transition: 0.3s all;
+            .nav-link {
+                padding: 1rem;
+            }
+        }
+        .show {
+            left: 0;
+        }
+        .hide {
+            left: -200px;
+        }
+    }
+}

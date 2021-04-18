@@ -1,0 +1,272 @@
+.first-home-section {
+    background-color: #fff;
+    padding: 25px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    .section-title {
+        color: #f17e0a;
+        font-size: 3.5rem;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+    .section-desc {
+        font-size: 1.25rem;
+        line-height: 30px;
+    }
+    .shop-link {
+        margin-top: 15px;
+        display: inline-block;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        background-color: #333;
+        color: #fff;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        transition: 0.5s all;
+        -webkit-transition: 0.5s all;
+        -moz-transition: 0.5s all;
+        -ms-transition: 0.5s all;
+        -o-transition: 0.5s all;
+        &:hover {
+            background-color: #f17e0a;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .first-home-section {
+        .section-title {
+            font-size: 3rem;
+        }
+        .section-desc {
+            font-size: 1rem;
+        }
+        .shop-link {
+            font-size: 1rem;
+        }
+        img {
+            height: 250px;
+            justify-self: center;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .first-home-section {
+        display: block;
+        .section-title {
+            font-size: 3rem;
+        }
+        img {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .first-home-section {
+        .section-title {
+            font-size: 2rem;
+        }
+    }
+}
+
+.second-home-section {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    .card-service {
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        padding: 1.25rem 2rem;
+        text-align: center;
+        line-height: 1.25rem;
+        img {
+            height: 60px;
+            margin-bottom: 15px;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .card-description {
+            color: #6c757d;
+            margin-bottom: 1.25rem;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .second-home-section {
+        .card-service {
+            .card-title {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+.third-home-section {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    .third-item-card {
+        align-items: center;
+        background-color: #fff;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1.25rem 2rem;
+        img {
+            height: 300px;
+        }
+        .section-title {
+            color: #f17e0a;
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+        }
+        .section-description {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .shop-link {
+            display: inline-block;
+            text-decoration: none;
+            padding: 0.25rem 0.5rem;
+            background-color: #333;
+            color: #fff;
+            font-size: 1rem;
+            line-height: 1.5;
+            transition: 0.5s all;
+            -webkit-transition: 0.5s all;
+            -moz-transition: 0.5s all;
+            -ms-transition: 0.5s all;
+            -o-transition: 0.5s all;
+            &:hover {
+                background-color: #f17e0a;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .third-home-section {
+        .third-item-card {
+            img {
+                height: 150px;
+            }
+
+            .section-description {
+                font-size: 1rem;
+            }
+            .section-title {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .third-home-section {
+        grid-template-columns: 1fr;
+
+        .third-item-card {
+            img {
+                justify-self: center;
+            }
+        }
+    }
+}
+
+.women-section {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    .women-section-img {
+        padding: 1.5rem;
+        text-align: center;
+        background-color: #fff;
+        img {
+            max-height: 400px;
+        }
+    }
+}
+
+.women-section-content {
+    background-color: #eee8aa;
+    padding: 0 4.5rem;
+    display: grid;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+
+    .women-content-title {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+        color: #212529;
+    }
+    .women-content-description {
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #212529;
+    }
+
+    .women-shop {
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        width: fit-content;
+        padding: 0.375rem 0.75rem;
+        line-height: 1.5;
+        transition: 0.5s all;
+        -webkit-transition: 0.5s all;
+        -moz-transition: 0.5s all;
+        -ms-transition: 0.5s all;
+        -o-transition: 0.5s all;
+
+        &:hover {
+            background-color: #f17e0a;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .women-section {
+        .women-section-img {
+            padding: 1rem;
+            img {
+                height: 250px;
+            }
+        }
+    }
+    .women-section-content {
+        padding: 0 1rem;
+        .women-content-title {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .women-section-content {
+        .women-content-title {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .women-section {
+        grid-template-columns: 1fr;
+    }
+    .women-section-content {
+        padding: 1rem;
+    }
+}

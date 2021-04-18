@@ -1,0 +1,8 @@
+export const TOGGLE_NAV = 'TOGGLE_NAV';
+export const CURRENCY = 'CURRENCY';
+export const PRICE_RANGE = 'PRICE_RANGE';
+export const ADD_TO_CART = "ADD_TO_CART";
+export const TOGGLE_WISHES = "TOGGLE_WISHES";
+export const UPDATE_PRODUCT_QUANTITY = "UPDATE_PRODUCT_QUANTITY";
+export const REMOVE_FORM_CART = "REMOVE_FORM_CART";
+export const CLEAR_CART = "CLEAR_CART";

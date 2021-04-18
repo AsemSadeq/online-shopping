@@ -1,0 +1,14 @@
+.breadcrums {
+    margin-bottom: 1rem;
+    .breadcrum-link {
+        text-decoration: none;
+        color: black;
+    }
+    .disable-breadcrum {
+        pointer-events: none;
+        color: gray;
+    }
+    .link-separator {
+        padding: 0 0.25rem;
+    }
+}

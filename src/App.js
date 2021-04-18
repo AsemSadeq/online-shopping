@@ -1,24 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './components/Home/Home';
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import ProductContainer from './components/ProductContainer/ProductContainer';
+import Email from './components/Email/Email';
+import Footer from './components/Footer/Footer';
+import OrderProduct from './components/OrderProduct/OrderProduct';
+import Cart from './components/Cart/Cart';
+import Checkout from './components/Checkout/Checkout';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Router>
+        <Navbar />
+        <Switch>
+          <main>
+            <Route exact path="/" component={Home} />
+            <Route path={["/all", "/men", "/women", "/kids", "/sale", "/wishes"]} component={ProductContainer} />
+            <Route path="/cart" component={Cart} />
+            <Route path="/checkout" component={Checkout} />
+            <Route path="/product/:productId" component={OrderProduct} />
+          </main>
+          <Redirect to="/" />
+        </Switch>
+        <Email />
+        <Footer />
+      </Router>
+    </Provider>
+
   );
 }
 
