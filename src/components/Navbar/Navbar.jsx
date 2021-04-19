@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Navbar.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { NavLink as Link } from 'react-router-dom';
@@ -10,9 +10,6 @@ function Navbar() {
     const dispatch = useDispatch();
     const cartTotal = useSelector(state => state.cartTotal);
 
-    useEffect(() => {
-        window.document.body.style.overflow = `${isNavOpen ? 'hidden' : 'auto'}`;
-    }, [isNavOpen]);
     return (
         <nav>
             <div className="container">
