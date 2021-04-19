@@ -1,5 +1,5 @@
 # Online Shopping App
-This is a sample online shopping app made using react, redux, react router dom, and scss.
+This is a online shopping app made using react, redux, react router dom, and scss.
 
 # Demo https://online-shoppi-6b05e.web.app/
 ## Build Setup
