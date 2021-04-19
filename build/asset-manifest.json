@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.9ff5f66f.chunk.css",
+    "main.css": "/static/css/main.b0b7dbd5.chunk.css",
     "main.js": "/static/js/main.f9c7b2d4.chunk.js",
     "main.js.map": "/static/js/main.f9c7b2d4.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.431056f0.js",
@@ -10,7 +10,7 @@
     "static/js/3.75874797.chunk.js": "/static/js/3.75874797.chunk.js",
     "static/js/3.75874797.chunk.js.map": "/static/js/3.75874797.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.9ff5f66f.chunk.css.map": "/static/css/main.9ff5f66f.chunk.css.map",
+    "static/css/main.b0b7dbd5.chunk.css.map": "/static/css/main.b0b7dbd5.chunk.css.map",
     "static/js/2.7753c233.chunk.js.LICENSE.txt": "/static/js/2.7753c233.chunk.js.LICENSE.txt",
     "static/media/analog-quartz-watch.jpg": "/static/media/analog-quartz-watch.f8f0ac7e.jpg",
     "static/media/baby_dress.3a23615a.jpg": "/static/media/baby_dress.3a23615a.ac0f41c6.jpg",
@@ -42,7 +42,7 @@
   "entrypoints": [
     "static/js/runtime-main.431056f0.js",
     "static/js/2.7753c233.chunk.js",
-    "static/css/main.9ff5f66f.chunk.css",
+    "static/css/main.b0b7dbd5.chunk.css",
     "static/js/main.f9c7b2d4.chunk.js"
   ]
 }
