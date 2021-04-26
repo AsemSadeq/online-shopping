@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink as Link } from 'react-router-dom';
 import './Breadcrumb.scss';
 
-function Breadcrumb({ links }) {
+function Breadcrumb() {
     const pathnames = window.location.pathname.split('/');
     const isLast = pathnames.length - 1;
     return (
@@ -21,4 +21,4 @@ function Breadcrumb({ links }) {
     )
 }
 
-export default Breadcrumb
+export default Breadcrumb;

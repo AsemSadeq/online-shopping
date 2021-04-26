@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './ProductSale.scss';
 import { NavLink as Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -11,6 +11,10 @@ function ProdutSale({ currentProduct }) {
     const rates = useSelector(state => state.exchangeRates.rates);
     const symbol = getKeyByValue(currencySymbols, usedCurrency.symbol);
     const rate = rates[symbol];
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [currentProduct]);
 
     return (
         <div className="sale-section">
@@ -34,4 +38,4 @@ function ProdutSale({ currentProduct }) {
     )
 }
 
-export default ProdutSale
+export default React.memo(ProdutSale);
