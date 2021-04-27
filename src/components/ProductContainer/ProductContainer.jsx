@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeCurrency, changePriceRange } from '../../redux/action'
 import Breadcrumb from '../Breadcrumbs/Breadcrumb';
@@ -13,7 +13,7 @@ function Product() {
     const priceFilter = useSelector(state => state.priceFilter);
     const rates = useSelector(state => state.exchangeRates.rates);
     const usedCurrency = useSelector(state => state.usedCurrency);
-    const currentSymbol = getKeyByValue(currencySymbols, usedCurrency.symbol);
+    const currentSymbol = useMemo(() => getKeyByValue(currencySymbols, usedCurrency.symbol), [usedCurrency, currencySymbols]);
     const rate = rates[currentSymbol];
 
     const convertCurrency = (e) => {

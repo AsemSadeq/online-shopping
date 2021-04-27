@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import './ProductCard.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
@@ -13,7 +13,7 @@ function ProductCard({ product }) {
     const usedCurrency = useSelector(state => state.usedCurrency);
     const currencySymbols = useSelector(state => state.currencySymbols);
     const rates = useSelector(state => state.exchangeRates.rates);
-    const currentSymbol = getKeyByValue(currencySymbols, usedCurrency.symbol);
+    const currentSymbol = useMemo(() => getKeyByValue(currencySymbols, usedCurrency.symbol), [currencySymbols, usedCurrency]);
     const rate = rates[currentSymbol];
     const wishList = useSelector(state => state.wishlist);
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { clearCart } from '../../redux/action';
 import { getKeyByValue, renderNumber } from '../../services/services'
@@ -12,7 +12,7 @@ function Checkout(props) {
     const usedCurrency = useSelector(state => state.usedCurrency);
     const rates = useSelector(state => state.exchangeRates.rates);
     const currencySymbols = useSelector(state => state.currencySymbols);
-    const currentSymbol = getKeyByValue(currencySymbols, usedCurrency.symbol);
+    const currentSymbol = useMemo(() => getKeyByValue(currencySymbols, usedCurrency.symbol), [currencySymbols, usedCurrency]);
     const rate = rates[currentSymbol];
     const Total = cart.length === 1 ? (cart[0].price * cart[0].quantity) : cart.reduce((total, product) => total + (Math.round(product.price) * product.quantity), 0);
     const [shippingAmount, setShippingAmount] = useState(deliveryOptions[0].cost);

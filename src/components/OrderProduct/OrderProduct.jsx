@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import './OrderProduct.scss';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
@@ -18,9 +18,9 @@ function OrderProduct() {
     const usedCurrency = useSelector(state => state.usedCurrency);
     const currencySymbols = useSelector(state => state.currencySymbols);
     const rates = useSelector(state => state.exchangeRates.rates);
-    const currentSymbol = getKeyByValue(currencySymbols, usedCurrency.symbol);
+    const currentSymbol = useMemo(() => getKeyByValue(currencySymbols, usedCurrency.symbol), [currencySymbols, usedCurrency]);
     const rate = rates[currentSymbol];
-    const quantityInCart = checkQuantity(cartItems, product.id);
+    const quantityInCart = useMemo(() => checkQuantity(cartItems, product.id), [cartItems, product]);
     const [quantity, setQuantity] = useState(quantityInCart === product.quantity ? 0 : 1);
 
     const handleQuantity = (e) => {
