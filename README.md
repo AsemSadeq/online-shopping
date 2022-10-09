@@ -1,7 +1,7 @@
 # Online Shopping App
-This is a online shopping app made using react, redux, react router dom, and scss.
+This is an online shopping app made using react, redux, react router dom, and scss.
 
-# Demo https://online-shoppi-6b05e.web.app/
+# Demo link 
 ## Build Setup
 
 Run npm install in root directory, to install all required dependencies.
